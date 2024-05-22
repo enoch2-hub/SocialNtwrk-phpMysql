@@ -40,11 +40,42 @@
     }
 
     function sanitizeString($var) {
+        global $pdo;
+        $var = strip_tags($var);//prevents users from injecting HTML or JS
+        $var = htmlentities($var);//prevents special charactersto HTML entities
+        
+        // if(get_magic_quotes_gpc())//checks if the magic quotes feature is enabled 
+        // // which automatically escape special characters in input data 
+        // //(by adding backslashes before quotes).
+        // {
+        //     $var = stripcslashes($var);
+        // } 
+        $result = $pdo->quote($var);// Quote the string for use in a SQL query, adding single quotes
+        return str_replace("'", "", $result);//Remove the added single quotes
+    }
+    // The sanitizeString function:
+    //     1-Removes any HTML and PHP tags to prevent HTML/JavaScript injection.
+    //     2-Converts special characters to HTML entities.
+    //     3-Checks and removes magic quotes if enabled.
+    //     4-Uses the PDO quote method to escape the string for SQL safety.
+    //     5-Removes the quotes added by the quote method to return a clean, escaped string.
 
+    function showProfile1($user) {
+        
     }
 
-    function showProfile($user) {
-        
+
+
+    function showProfile($user)
+    {
+        if (file_exists("$user.jpg"))
+        echo "<img src='$user.jpg' style='float:left;'>";
+        $result = $pdo->query("SELECT * FROM profiles WHERE user='$user'");
+        while ($row = $result->fetch())
+    {
+        die(stripslashes($row['text']) . "<br style='clear:left;'><br>");
+    }
+        echo "<p>Nothing to see here, yet</p><br>";
     }
 
 
