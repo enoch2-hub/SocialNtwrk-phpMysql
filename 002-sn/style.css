@@ -1,0 +1,87 @@
+* {
+    font-family:verdana,sans-serif;
+    font-size :14pt;
+}
+body {
+    width :700px;
+    margin :20px auto;
+    background:#f8f8f8;
+    /* height:80rem; */
+    /* border :1px solid #888; */
+    }
+html {
+    background:#fff
+}
+
+img {
+    border :1px solid black;
+    margin-right :15px;
+    -moz-box-shadow :2px 2px 2px #888;
+    -webkit-box-shadow:2px 2px 2px #888;
+    box-shadow :2px 2px 2px #888;
+}
+
+.username {
+    text-align :center;
+    background :rgb(0, 77, 177);
+    border-radius: .2rem;
+    color :rgb(221, 221, 221);
+    font-family:helvetica;
+    font-size :20pt;
+    padding :4px;
+}
+
+.info {
+font-style :italic;
+margin :40px 0px;
+text-align :center;
+}
+
+.center {
+text-align:center;
+background-color: #80bbff;
+padding: 2rem;
+border-radius: 1rem;
+}
+
+.center > a {
+    
+    background-color: rgb(27, 27, 27);
+    color: #f8f8f8;
+    /* border: 1px solid whitesmoke; */
+    padding: .5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+.subhead {
+font-weight:bold;
+}
+.taken, .error {
+color:red;
+}
+.available {
+    color:green;
+    }
+    .whisper {
+    font-style:italic;
+    color :#006600;
+    }
+    #logo {
+    font-family:Georgia;
+    font-weight:bold;
+    font-style :italic;
+    font-size :97px;
+    color :rgb(53, 53, 53);
+    }
+    #robin {
+    position :relative;
+    border :0px;
+    margin:-3.5rem;
+    top :17px;
+        -moz-box-shadow :0px 0px 0px;
+        -webkit-box-shadow:0px 0px 0px;
+        box-shadow :0px 0px 0px;
+    }
+    #used {
+    margin-top:50px;
+    }

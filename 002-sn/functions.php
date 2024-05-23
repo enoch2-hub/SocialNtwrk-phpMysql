@@ -60,23 +60,39 @@
     //     4-Uses the PDO quote method to escape the string for SQL safety.
     //     5-Removes the quotes added by the quote method to return a clean, escaped string.
 
-    function showProfile1($user) {
-        
-    }
-
-
-
-    function showProfile($user)
-    {
-        if (file_exists("$user.jpg"))
-        echo "<img src='$user.jpg' style='float:left;'>";
+    function showProfile2($user) {
+        if(file_exists("$user.jpg")) {
+            echo "<img src='$user.jpg' style='float:left; border-radius=10rem;'>";
+        } 
+        global $pdo;
         $result = $pdo->query("SELECT * FROM profiles WHERE user='$user'");
-        while ($row = $result->fetch())
-    {
-        die(stripslashes($row['text']) . "<br style='clear:left;'><br>");
-    }
+
+        while ($row = $result->fetch()) {
+            die(stripslashes($row['text']) . "<br style='clear:left;'> <br>");
+        }
+
         echo "<p>Nothing to see here, yet</p><br>";
     }
+
+
+    function showProfile($user) {
+        if (file_exists("$user.jpg")) {
+            echo "<img src='$user.jpg' style='float:left;'>";
+        }
+    
+        global $pdo;
+        // Use a prepared statement to avoid SQL injection
+        $stmt = $pdo->prepare("SELECT * FROM profiles WHERE user = :user");
+        $stmt->execute(['user' => $user]);
+    
+        if ($row = $stmt->fetch()) {
+            echo stripslashes($row['text']) . "<br style='clear:left;'><br>";
+        } else {
+            echo "<p>Nothing to see here, yet</p><br>";
+        }
+    }
+    
+
 
 
 ?>
