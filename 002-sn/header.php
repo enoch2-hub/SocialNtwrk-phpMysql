@@ -33,12 +33,12 @@ echo <<<_INIT
 
 
 echo <<<_MAIN
-    <div data-role='page'>
+    <div class='navbar' data-role='page'>
         <div data-role='header'>
-            <div id='logo' class='center'>
-                Bl<img id='robin' src='ball.png'>bby
+        <div id='logo' class='center'>
+        <div class="username">$userstr</div>
+                <img id='robin' src='ball.png'>
             </div>
-                <div class="username">$userstr</div>
         </div>
         <div data-role='content'>
     

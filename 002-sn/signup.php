@@ -58,9 +58,7 @@ _END;
         }
     }
 
-
-echo <<<_END
-
+?>
 
 
 <form method="post" action="signup.php?r=$randstr">$error
@@ -69,16 +67,29 @@ echo <<<_END
         <label for="">Please enter your details</label>
     </div>
 
+<?php
+    echo <<<_END
     <div data-role="fieldcontain">
         <label for="">Username</label>
         <input type="text" maxlength="16" name="user" 
         value="$user" onBlur='checkUser(this)'>
+
         <label for=""></label><div id="used">&nbsp;</div>
+    _END;
+
+
+    // if(isset($_POST['user'])){
+    //     echo `<label for=""></label><div id="used">&nbsp;</div>`;
+    // }
+
+      
+    echo <<<_END
+
     </div>
 
     <div data-role="fieldcontain">
         <label for="">Password</label>
-        <input type="password" maxlength="16" name="pass" value="$pass">
+        <input class='password' type="password" maxlength="16" name="pass" value="$pass">
     </div>
 
     <div data-role="fieldcontain">
@@ -88,16 +99,9 @@ echo <<<_END
 
 </form>
 
-
 _END;
 
 ?>
-
-
-
-
-
-
 
 
 
