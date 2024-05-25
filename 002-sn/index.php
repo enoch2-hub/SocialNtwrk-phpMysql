@@ -13,7 +13,7 @@
     echo  <<<_END
 
         </div><br>
-        <div data-role="footer">
+        <div class='footer' data-role="footer">
 
             <h4>Web App from <i><a href='https://github.com/RobinNixon/lpmj6'
             target='_blank'>Learning PHP MySQL & JavaScript</a></i></h4>

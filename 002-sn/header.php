@@ -33,13 +33,14 @@ echo <<<_INIT
 
 
 echo <<<_MAIN
-    <div class='navbar' data-role='page'>
-        <div data-role='header'>
-        <div id='logo' class='center'>
-        <div class="username">$userstr</div>
-                <img id='robin' src='ball.png'>
+    <div class='main' data-role='page'>
+        <div class='navhead' data-role='header'>
+            <div id='logo'>
+                <div class="username">$userstr</div>
+                    <img id='robin' src='ball.png'>
             </div>
         </div>
+
         <div data-role='content'>
     
     _MAIN;
@@ -47,7 +48,7 @@ echo <<<_MAIN
     if($loggedin) {
 
 echo <<<_LOGGEDIN
-    <div class='center'>
+    <div class='navbar'>
 
         <a data-role='button' data-inline='true' data-icon='home'
             data-transition="slide" href='members.php?view=$user&r=$randstr'>
@@ -82,7 +83,7 @@ _LOGGEDIN;
     } else {
 
 echo <<<_GUEST
-        <div class='center'>
+        <div class='navbar'>
             <a data-role='button' data-inline='true' data-icon='home'
                 data-transition='slide' href='index.php?r=$randstr'>
             Home</a>
@@ -96,7 +97,6 @@ echo <<<_GUEST
             Login</a>
         </div>
 
-        <p class='info'>(You must be logged in to use this app)</p>
 
     _GUEST;
 
