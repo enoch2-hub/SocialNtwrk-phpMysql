@@ -41,10 +41,10 @@
     $num = $result->rowCount();
 
     //===List members with follow unfollow options
+    echo "<div class='members-container'>";
     while ($row = $result->fetch()) {
         if($row['user'] == $user) continue;
-
-        echo "<li><a data-transition='slide' href='members.php?view=" .
+        echo "<li class='members-list'><a data-transition='slide' href='members.php?view=" .
             $row['user'] . "&$randstr'>" .$row['user'] . "</a>";
 
         $follow = "follow";
@@ -71,12 +71,12 @@
             echo " [<a data-transition='slide'
                 href='members.php?add=" . $row['user'] . "&r=$randstr'>$follow</a>]";
         } else {
-            echo " [<a data-transition='slide'
+            echo " [<a data-transition='slide' style='color:rgb(255, 151, 151)'
                 href='members.php?remove=" . $row['user'] . "&r=$randstr'>drop</a>]";
         } 
 
-
     }
+    echo "</div>";
 
 ?>
     </ul></div>

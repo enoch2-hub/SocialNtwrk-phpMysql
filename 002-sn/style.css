@@ -74,10 +74,23 @@ input {
     margin-top: -5rem;
 }
 
-.members {
-    list-style-type: none;
+.members-container {
+    margin-top: 3rem;
+    background-color: #2e2e2e;
+    border-radius: 1rem;
     padding: 1rem;
 }
+
+.members-list {
+    list-style-type: none;
+    padding: 0.5rem;
+    color: #e6e6e6;
+}
+
+.members-list > a {
+    color: rgb(127, 168, 255);
+}
+
 
 .username {
     text-align :left;

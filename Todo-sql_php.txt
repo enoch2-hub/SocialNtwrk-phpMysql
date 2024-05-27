@@ -1,0 +1,107 @@
+___Chapter 11-Accessing Mysql via php
+
+	Creating a table 	-✔
+	Describing a table 	-✔
+	Dropping a table 	-✔
+	Adding data 		-✔
+	Retrieving data 		-✔
+	Updating data 		-✔
+	Deleting data 		-✔
+	Using auto_increment	-✔
+	
+	
+	
+___Chapter 8-Intro to Mysql
+
+---Checking to add customers table...
+	Index::✔
+		* Creating an index	- ✔
+		* Using CREATE INDEX	- ✔
+		* Adding indexes when creating tables - ✔
+		* Primary keys	- ✔
+		* Creating a FULLTEXT index - ✔
+	Querying a MySQL Database::✔ 
+		|* SELECT-✔ |* SELECT COUNT-✔ |* SELECT DISTINCT -✔ |* DELETE -✔ 
+		|* WHERE -✔  |* MATCH...AGAINST -🛑 |* MATCH...AGAINST in boolean mode - 
+		|* UPDATE...SET - |* ORDER BY - |* GROUP BY -  ||
+	Joining Tables Together::✔  
+		|* NATURAL JOIN-✔   |* JOIN...ON-✔    |* Using AS-✔    ||
+		
+
+
+
+___Chapter 11-Accessing Mysql via php
+	Performing additional queries 	- ✔
+	Prevent hacking attempts 		- ✔
+	Using placeholders 			- ✔
+	Preventing JS injection in2 html	- ✔
+	
+
+
+___Chapter 13-cookies,sessions, auth
+	Using cookies in php::
+		Setting a Cookie		- ✔
+		Accessing a Cookie	- ✔
+		Destroying a Cookie	- ✔
+	
+	HTTP Authentication:: - 🟢
+	
+	Storing Usernames and Password::
+		Using password_hash	- ✔
+		Using password_verify	- ✔
+		An Example Program	- ✔
+		
+	Using Sessions:: 
+		Starting a Session	- ✔
+		Ending a Session		- ✔
+		Setting a Timeout	- ✔
+		Session Security	:: 
+			Preventing session hijacking - ✔
+			Preventing session fixation - 🟡 (start project simultaneously)
+			Forcing cookie-only sessions - 
+			Using a shared server		- 
+			
+	
+
+
+Chapter 29-Bring all together
+	functions.php 	- ✔
+	header.php		- ✔
+	setup.php		- ✔
+	index.php		- ✔
+	signup.php		- ✔
+	checkuser.php	- ✔
+	login.php		- ✔
+	profile.php	- ✔
+	members.php	- ✔
+	friends.php	- ✔
+	messages.php	- 🟢
+	logout.php		- ✔
+	styles.css		- ✔
+	javascript.js	- 
+	
+	
+	
+	
+		
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
