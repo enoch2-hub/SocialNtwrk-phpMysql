@@ -58,17 +58,18 @@ _END;
         }
     }
 
-?>
 
 
-<form method="post" action="signup.php?r=$randstr">$error
 
-    <div data-role="fieldcontain">
-        <label for="">Please enter your details</label>
-    </div>
-
-<?php
     echo <<<_END
+    <form method="post" action="signup.php?r=$randstr" class='signuplogin-form'>
+        $error
+
+        <div data-role="fieldcontain">
+            <label for="">Please enter your details</label>
+        </div>
+
+
     <div data-role="fieldcontain">
         <label for="">Username</label>
         <input type="text" maxlength="16" name="user" 

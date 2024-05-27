@@ -33,7 +33,7 @@
 
 echo <<<_END
 
-    <form method='post' action='login.php?r=$randstr'>
+    <form method='post' action='login.php?r=$randstr' class='signuplogin-form'>
         
         <div data-role='fieldcontain'>
             <label></label>
